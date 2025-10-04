@@ -35,7 +35,7 @@ stages:
                       echo "Azure CLI ya está instalado."
                     fi
                   displayName: 'Verificar e Instalar Azure CLI'
-                  failOnStderr: true
+                  failOnStderr: false
 
                 - script: |
                     # Verificar e instalar Docker en la máquina virtual
@@ -60,7 +60,7 @@ stages:
                       echo "Docker ya está instalado."
                     fi
                   displayName: 'Verificar e Instalar Docker'
-                  failOnStderr: true
+                  failOnStderr: false
 
                 - script: |
                     # Autenticarse en Azure Container Registry utilizando nombre de usuario y contraseña
@@ -86,7 +86,7 @@ stages:
 
                     sudo docker ps
                   displayName: 'Descargar y ejecutar la imagen MySQL desde ACR'
-                  failOnStderr: true
+                  failOnStderr: false
 
                 - script: |
                     # Mostrar la URL para conectarse a MySQL
